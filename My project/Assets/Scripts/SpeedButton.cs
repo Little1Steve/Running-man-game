@@ -6,7 +6,7 @@ public class SpeedButton : MonoBehaviour
 {
        public void Onclick()
             {
-            Holder.Speed += Holder.SpeedPerClick;
+            Holder.Speed += Holder.SpeedPerClick; //Increases the total amount of speed when the attached button is clicked
         }
   
 }

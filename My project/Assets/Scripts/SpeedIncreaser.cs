@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpeedIncreaser : MonoBehaviour
 {
-    public int DelayAmount = Holder.SpeedDelayTime;
+    int DelayAmount = Holder.SpeedDelayTime; // Sets the interval delay
     protected float Timer;
 
 
@@ -12,12 +12,12 @@ public class SpeedIncreaser : MonoBehaviour
 
     void Update()
     {
-        Timer += Time.deltaTime;
+        Timer += Time.deltaTime; // Tracks real life time
 
         if (Timer >= DelayAmount)
         {
-            Timer = 0f;
-            Holder.Speed += Holder.SpeedPerTime ; 
+            Timer = 0f; // Resets the time to 0
+            Holder.Speed += Holder.SpeedPerTime ; // Increases speed by variable amount
         
         }
     }

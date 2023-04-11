@@ -16,12 +16,12 @@ public class UpgradeSpeedTooltip : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         Vector2 curScreenPoint = new Vector2(Input.mousePosition.x, Input.mousePosition.y + 20);
         Description.transform.position = curScreenPoint;
+        DescriptionText.text = ("Upgrade speed per tick\n" + "Increases your passive income\n" + "Cost: " + Mathf.Round(Holder.SpeedUpgradeCost));
     }
 
    
     public void OnPointerEnter(PointerEventData eventdata)
     {
-        DescriptionText.text = ("Increases your passive income\n" + "Cost: " + Mathf.Round(Holder.SpeedUpgradeCost));
         Description.SetActive(true);
     }
     public void OnPointerExit(PointerEventData eventdata)
