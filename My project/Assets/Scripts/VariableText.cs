@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using System;
 
 public class VariableText : MonoBehaviour
 {
     public TextMeshProUGUI counterText;
-    float counter;
-
+    private float counter;
     public void Update()
     {
-        counter = Holder.Speed;
+        counter = (float)System.Math.Round(Holder.Speed, 2, MidpointRounding.AwayFromZero); // Takes the rounded upgrade cost and makes into text
         counterText.text = counter.ToString();
     }
+
 }

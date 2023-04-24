@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,7 +11,7 @@ public class UpgradeSpeedClickText : MonoBehaviour
     private float counter;
     public void Update()
     {
-        counter = (int)Mathf.Round(Holder.SpeedUpgradeClickCost); //Takes the rounded upgrade cost and makes into text
+        counter = (float)System.Math.Round(Holder.SpeedUpgradeClickCost, 2, MidpointRounding.AwayFromZero); // Takes the rounded upgrade cost and makes into text
         counterText.text = counter.ToString();
     }
 
