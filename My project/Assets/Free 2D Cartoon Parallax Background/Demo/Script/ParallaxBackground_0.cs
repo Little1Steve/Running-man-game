@@ -5,7 +5,6 @@ using UnityEngine;
 public class ParallaxBackground_0 : MonoBehaviour
 {
     public bool Camera_Move;
-    public float Camera_MoveSpeed = 1.5f;
     [Header("Layer Setting")]
     public float[] Layer_Speed = new float[7];
     public GameObject[] Layer_Objects = new GameObject[7];
@@ -26,6 +25,8 @@ public class ParallaxBackground_0 : MonoBehaviour
     }
 
     void Update(){
+        float x = (float)Holder.Speed;
+        float Camera_MoveSpeed = Mathf.Sqrt(x);
         //Moving camera
         if (Camera_Move){
         _camera.position += Vector3.right * Time.deltaTime * Camera_MoveSpeed;

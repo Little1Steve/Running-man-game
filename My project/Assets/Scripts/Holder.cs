@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Holder : MonoBehaviour
 {
-    public static double Speed = 100000d;
+    public static double Speed = 1d;
     public static double SpeedPerTime = 0.2d;
     public static double SpeedPerClick = 0.1d;
     public static double SpeedUpgradeCost = 10d;
@@ -18,6 +18,16 @@ public class Holder : MonoBehaviour
     public static double BigUpgradeCost = 10d;
     public static double BigUpgradeAmount = 2d;
     public static double BigUpgradeCostMultiplier = 4d;
+    public static float CameraMoveSpeed = 5f;
+    public static float CameraMoveSpeedIncrease = 1f;
+    public static float CoinMoveSpeed = 5f;
+    public static double Coins = 0d;
+    public static double CoinsIncrease = 1d; 
+    public static double PassiveSpeedDecrease = 1f;
+    public static double SpeedDecreaseDelayTime = 10f;
+    public static double CoinsPerCoin = 1d;
+    public static double CoinsPerCoinUpgradeAmount = 0.5d;
+    public static double CoinsPerCoinUpgradeCost = 10d;
 }
 
 public class Layout : MonoBehaviour

@@ -7,10 +7,10 @@ public class UpgradeSpeedClick : MonoBehaviour
 {
    public void Onclick()
     {
-        if (Holder.Speed >= Holder.SpeedUpgradeClickCost)
+        if (Holder.Coins >= Holder.SpeedUpgradeClickCost)
         {
             Holder.SpeedPerClick += Holder.SpeedUpgradeClickAmount;
-            Holder.Speed -= Holder.SpeedUpgradeClickCost;
+            Holder.Coins -= Holder.SpeedUpgradeClickCost;
             Holder.SpeedUpgradeClickCost *= Holder.SpeedUpgradeCostMultiplier;
         }
         else

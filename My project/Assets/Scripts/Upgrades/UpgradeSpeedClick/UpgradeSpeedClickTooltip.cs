@@ -25,8 +25,9 @@ public class UpgradeSpeedClickTooltip : MonoBehaviour, IPointerEnterHandler, IPo
 
     void Update()
     {
-        Vector2 curScreenPoint = new(Input.mousePosition.x, Input.mousePosition.y);
+        Vector2 curScreenPoint = new(Input.mousePosition.x/6, Input.mousePosition.y/6);
         Description.transform.position = curScreenPoint;
+        Debug.Log(curScreenPoint);
         SetText("Upgrade speed per click\n" + "Increases income per click\n" + "Cost: " + (float)System.Math.Round(Holder.SpeedUpgradeClickCost, 2, MidpointRounding.AwayFromZero), DescriptionText, Background);
     }
 

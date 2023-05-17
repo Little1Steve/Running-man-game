@@ -11,8 +11,16 @@ public class VariableText : MonoBehaviour
     private float counter;
     public void Update()
     {
-        counter = (float)System.Math.Round(Holder.Speed, 2, MidpointRounding.AwayFromZero); // Takes the rounded upgrade cost and makes into text
-        counterText.text = counter.ToString();
+
+        if (Holder.Coins == 1)
+        {
+            counter = (float)System.Math.Round(Holder.Coins, 2, MidpointRounding.AwayFromZero); // Takes the rounded upgrade cost and makes into text
+            counterText.text = counter.ToString() + " Coin";
+        }
+        else {
+            counter = (float)System.Math.Round(Holder.Coins, 2, MidpointRounding.AwayFromZero); // Takes the rounded upgrade cost and makes into text
+            counterText.text = counter.ToString() + " Coins";
+        }
     }
 
 }
