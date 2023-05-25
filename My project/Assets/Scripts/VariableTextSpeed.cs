@@ -10,7 +10,7 @@ public class VariableTextSpeed : MonoBehaviour
     private float counter;
     public void Update()
     {
-            counter = (float)System.Math.Round(Holder.Speed, 2, MidpointRounding.AwayFromZero); // Takes the rounded upgrade cost and makes into text
+            counter = (float)System.Math.Round(Holder.Speed, 1, MidpointRounding.AwayFromZero); // Takes the rounded upgrade cost and makes into text
             counterText.text = counter.ToString() + " Speed";
         
     }

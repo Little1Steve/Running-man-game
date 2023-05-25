@@ -9,7 +9,7 @@ public class Holder : MonoBehaviour
     public static double SpeedPerClick = 0.1d;
     public static double SpeedUpgradeCost = 10d;
     public static double SpeedUpgradeAmount = 0.1d;
-    public static double SpeedUpgradeCostMultiplier = 8d/7d;
+    public static double SpeedUpgradeCostMultiplier = 1.1d;
     public static decimal SpeedIncreaseDelayTime = 10M;
     public static double SpeedUpgradeClickCost = 10d;
     public static double SpeedUpgradeClickAmount = 0.05d;
@@ -28,6 +28,7 @@ public class Holder : MonoBehaviour
     public static double CoinsPerCoin = 1d;
     public static double CoinsPerCoinUpgradeAmount = 0.5d;
     public static double CoinsPerCoinUpgradeCost = 10d;
+    public static double BaseTimeBetweenCoins = 5d;
 }
 
 public class Layout : MonoBehaviour

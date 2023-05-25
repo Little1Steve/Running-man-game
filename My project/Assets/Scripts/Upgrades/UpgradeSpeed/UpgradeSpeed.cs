@@ -8,10 +8,10 @@ public class UpgradeSpeed : MonoBehaviour
     public void Onclick() // Triggers the below code when the attached object is clicked
     {
         
-        if (Holder.Coins >= Holder.CoinsPerCoinUpgradeCost) // If the current speed amount is greater than the upgrade cost the below code will execute
+        if (Holder.Coins >= System.Math.Round(Holder.CoinsPerCoinUpgradeCost, MidpointRounding.AwayFromZero)) // If the current speed amount is greater than the upgrade cost the below code will execute
         {
             Holder.CoinsPerCoin += Holder.CoinsPerCoinUpgradeAmount; // Executes the upgrade
-            Holder.Coins -= Holder.CoinsPerCoinUpgradeCost; // Decreases the amount of coins held
+            Holder.Coins -= System.Math.Round(Holder.CoinsPerCoinUpgradeCost, MidpointRounding.AwayFromZero); // Decreases the amount of coins held
             Holder.CoinsPerCoinUpgradeCost *= Holder.SpeedUpgradeCostMultiplier; //Increses the cost of this upgrade
 
         }

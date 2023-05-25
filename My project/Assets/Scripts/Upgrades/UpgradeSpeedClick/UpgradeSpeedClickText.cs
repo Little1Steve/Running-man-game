@@ -3,16 +3,33 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class UpgradeSpeedClickText : MonoBehaviour
+public class UpgradeSpeedClickText : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-
     public TextMeshProUGUI counterText;
     private float counter;
+    private bool On = false;
+
+
     public void Update()
     {
-        counter = (float)System.Math.Round(Holder.SpeedUpgradeClickCost, 2, MidpointRounding.AwayFromZero); // Takes the rounded upgrade cost and makes into text
-        counterText.text = counter.ToString();
+        if (On == true)
+        {
+            counter = (float)System.Math.Round(Holder.SpeedUpgradeClickCost, MidpointRounding.AwayFromZero);
+            counterText.text = "cost: " + counter.ToString();
+        }
+        else if (On == false)
+        {
+            counterText.text = "Upgrade speed per click";
+        }
     }
-
+    public void OnPointerEnter(PointerEventData eventdata)
+    {
+        On = true;
+    }
+    public void OnPointerExit(PointerEventData eventdata)
+    {
+        On = false;
+    }
 }

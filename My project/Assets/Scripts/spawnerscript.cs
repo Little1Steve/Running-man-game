@@ -9,17 +9,18 @@ public class spawnerscript : MonoBehaviour
    public float minX;
    public float maxY;
    public float minY;
-   float TimeBetweenSpawn = 5f;
    private float SpawnTime;
 
 
     // Update is called once per frame
     void Update()
     {
-        if(Time.time > SpawnTime)
+        float TimeBetweenSpawn = (System.MathF.Cbrt((float)Holder.Speed) / System.MathF.Sqrt((float)Holder.Speed)) * (float)Holder.BaseTimeBetweenCoins;
+        if (Time.time > SpawnTime)
         {
             Spawn();
             SpawnTime = Time.time + TimeBetweenSpawn;
+            Debug.Log(TimeBetweenSpawn);
         }
     }
 
